@@ -13,10 +13,11 @@ Nightsky includes various resources from other brojects, like
 
 ## Installation
 ### Recommended method
-Install the pacman package with `pacman -U`
+Use the installation script.
 
 (Do this preferably on a clear arch installation, after you do your first reboot into a working system)
 ```
-wget https://raw.githubusercontent.com/kerichdev/nightfiles/main/skyinstall.pkg.tar.zst
-pacman -U skyinstall.pkg.tar.zst
+wget https://raw.githubusercontent.com/kerichdev/nightfiles/main/skyinstall.sh
+chmod +x skyinstall.sh
+./slyinstall.sh
 ```
