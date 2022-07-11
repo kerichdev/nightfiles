@@ -19,5 +19,5 @@ Use the installation script.
 ```
 wget https://raw.githubusercontent.com/kerichdev/nightfiles/main/skyinstall.sh
 chmod +x skyinstall.sh
-./slyinstall.sh
+./skyinstall.sh
 ```
