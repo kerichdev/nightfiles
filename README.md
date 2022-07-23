@@ -1,3 +1,5 @@
+# STILL UNDER CONSTRUCTION, COME BACK LATER
+
 
 # nightfiles, aka Nightsky
 Dotfiles of my personal Nightsky Linux (Arch) setup, available with a setup script.
