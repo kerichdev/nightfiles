@@ -2,7 +2,7 @@
 
 
 # nightfiles, aka Nightsky
-Dotfiles of my personal Nightsky Linux (Arch) setup, available with a setup script.
+Dotfiles of my personal Nightsky Linux (Arch) setup.
 ![Nightsky!](https://i.imgur.com/jJh4tWy.png "Nightsky Banner")
 
 ## What is it based on?
