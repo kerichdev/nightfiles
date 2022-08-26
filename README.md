@@ -1,6 +1,6 @@
-# nightfiles, aka Nightsky
-Dotfiles of my personal Nightsky Linux (Arch) setup.
-![Nightsky!](https://i.imgur.com/jJh4tWy.png "Nightsky Banner")
+![Nightsky!](https://github.com/kerichdev/nightfiles/blob/main/banner.nightsky?raw=true "Nightsky Banner")
+
+## Nightsky, my personal Arch Linux setup.
 
 ## What is it based on?
 Nightsky includes various resources from other brojects, like
