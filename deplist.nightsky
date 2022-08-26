@@ -25,5 +25,6 @@ polybar
 rofi
 ttf-material-design-icons-git
 ttf-meslo-nerd-font-powerlevel10k
+wireless_tools
 zsh
 zsh-autosuggestions
