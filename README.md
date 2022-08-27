@@ -2,13 +2,14 @@
 ![Nightsky!](https://github.com/kerichdev/nightfiles/blob/main/banner.nightsky?raw=true "Nightsky Banner")
 
 ## What is it based on?
-Nightsky includes various resources from other brojects, like
-- [Chrome Startpage (eaaasun/startpage)](https://github.com/eaaasun/startpage)
+Nightsky includes various resources from other brojects, like:
 - [Catppuccin (catppuccin org)](https://github.com/catppuccin/catppuccin)
 
 ## Installation and setup
-Clone the repo locally.
-
+Clone the repo locally. Since it includes submodules from my own forks to preserve licenses, make sure to clone recursively:
+```
+git clone --recursive https://github.com/kerichdev/nightfiles
+```
 Firstly, you should install the packages. Open a terminal of choice (Will be replaced with alacritty), and install your favorite AUR helper. Mine is `yay`, so i will go by it.
 
 To install the packages needed for the setup, go to the directory where you cloned the repo, and do:
