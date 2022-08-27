@@ -1,3 +1,6 @@
 [submodule "nightpage"]
 	path = nightpage
 	url = https://github.com/kerichdev/nightpage
+[submodule "nmcli-rofi"]
+	path = nmcli-rofi
+	url = https://github.com/kerichdev/nmcli-rofi
