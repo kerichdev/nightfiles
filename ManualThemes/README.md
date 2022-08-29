@@ -1,0 +1,1 @@
+This folder contains themes that contain manuial configuration. Open a theme folder to see the installation guided included with it.
