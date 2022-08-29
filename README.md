@@ -21,3 +21,13 @@ Then follow the steps your AUR helper gives you.
 **(The deplist may be incomplete! If you notice something not working, feel free to add any packages into the list, and I will see if I did, in fact, miss them.)**
 
 Then, move the contents of the repo `.config` folder, to your `.config` folder in `$HOME` (`/home/YOUR_USERNAME/.config/`)
+
+### Betterlockscreen
+Betterlockscreen requires some additonal setup. First of all, once you copy the config and the wallpaper to their respective folders, generate a lockscreen pre-render:
+```
+betterlockscreen -u ~/Wallpapers/tropic_island_night.jpg
+```
+Then, enable the systemd service for automatic lock-on-suspend:
+```
+systemctl enable betterlockscreen@$USER
+```
