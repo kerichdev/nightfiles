@@ -1,0 +1,37 @@
+# ~/.config/betterlockscreenrc
+
+# default options
+display_on=0
+span_image=false
+lock_timeout=300
+fx_list=()
+dim_level=40
+blur_level=1
+pixel_scale=10,1000
+solid_color=1e1e2e
+wallpaper_cmd="feh --bg-fill"
+quiet=false
+# i3lockcolor_bin="i3lock-color" # Manually set command for i3lock-color
+
+# default theme
+loginbox=1e1e2e
+loginshadow=181825
+locktext="Type password to unlock..."
+font="HarmonyOS Sans"
+ringcolor=cdd6f4
+insidecolor=1e1e2e
+separatorcolor=1e1e2e
+ringvercolor=cdd6f4
+insidevercolor=1e1e2e
+ringwrongcolor=cdd6f4
+insidewrongcolor=f38ba8
+timecolor=cdd6f4
+time_format="%H:%M %p"
+greetercolor=cdd6f4
+layoutcolor=cdd6f4
+keyhlcolor=89b4fa
+bshlcolor=f38ba8
+verifcolor=cdd6f4
+wrongcolor=f38ba8
+modifcolor=f38ba8
+bgcolor=1e1e2e
