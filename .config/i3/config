@@ -137,8 +137,8 @@ border_radius 4
 gaps inner 12
 gaps outer -6
 
-exec_always feh --bg-scale ~/Wallpapers/treewp.png
-bindsym Control+$mod+l exec "i3lock-fancy --text ''"
+exec_always feh --bg-scale ~/Wallpapers/tropic_island_night.jpg
+bindsym Control+$mod+l exec "betterlockscreen --lock"
 
 bindsym $mod+Tab exec rofi -show window
 
