@@ -4,3 +4,12 @@
 [submodule "nmcli-rofi"]
 	path = nmcli-rofi
 	url = https://github.com/kerichdev/nmcli-rofi
+[submodule "ManualThemes/youtube"]
+	path = ManualThemes/youtube
+	url = https://github.com/catppuccin/youtube
+[submodule "ManualThemes/github"]
+	path = ManualThemes/github
+	url = https://github.com/catppuccin/github
+[submodule "ManualThemes/telegram"]
+	path = ManualThemes/telegram
+	url = https://github.com/catppuccin/telegram
