@@ -2,7 +2,7 @@
 ![Nightsky!](https://github.com/kerichdev/nightfiles/blob/main/banner.nightsky?raw=true "Nightsky Banner")
 
 ## What is it based on?
-Nightsky includes various resources from other brojects, like:
+Nightsky includes various resources from other projects, like:
 - [Catppuccin (catppuccin org)](https://github.com/catppuccin/catppuccin)
 
 ## Installation and setup
