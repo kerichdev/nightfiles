@@ -31,3 +31,5 @@ Then, enable the systemd service for automatic lock-on-suspend:
 ```
 systemctl enable betterlockscreen@$USER
 ```
+
+## KEEP IN MIND, THE REPO IS EXTREMELY INCOMPLETE, I'M WORKING ON FINISHING IT UP. You'll probably have to set up a lot of stuff yourself.
