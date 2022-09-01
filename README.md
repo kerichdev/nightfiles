@@ -32,4 +32,9 @@ Then, enable the systemd service for automatic lock-on-suspend:
 systemctl enable betterlockscreen@$USER
 ```
 
+### btop
+Because of how btop handles configs, before I make an installation script, to apply the catppuccin theme you have to do one of the following:
+1. Open `btop`, click <kbd>Esc</kbd>, choose *Themes* and find *Catppuccin*. Choose it, and you're good to go.
+2. Open `btop.conf` in the btop config folder, and change the `$USER` in the `color_theme` line to your username.
+
 ## KEEP IN MIND, THE REPO IS EXTREMELY INCOMPLETE, I'M WORKING ON FINISHING IT UP. You'll probably have to set up a lot of stuff yourself.
