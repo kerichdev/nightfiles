@@ -12,7 +12,7 @@ Nightsky includes various resources from other projects, like:
 
 Clone the repo locally. Since it includes submodules from my own forks to preserve licenses, make sure to clone recursively:
 
-```
+```shell
 git clone --recursive https://github.com/kerichdev/nightfiles
 ```
 
@@ -20,7 +20,7 @@ Firstly, you should install the packages. Open a terminal of choice (Will be rep
 
 To install the packages needed for the setup, go to the directory where you cloned the repo, and do:
 
-```
+```shell
 yay -S - < deplist.nightsky
 ```
 
@@ -36,13 +36,13 @@ Then, move the contents of the repo `.config` folder, to your `.config` folder i
 
 Betterlockscreen requires some additonal setup. First of all, once you copy the config and the wallpaper to their respective folders, generate a lockscreen pre-render:
 
-```
+```shell
 betterlockscreen -u ~/Wallpapers/tropic_island_night.jpg
 ```
 
 Then, enable the systemd service for automatic lock-on-suspend:
 
-```
+```shell
 systemctl enable betterlockscreen@$USER
 ```
 
