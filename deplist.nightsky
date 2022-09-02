@@ -29,3 +29,5 @@ ttf-meslo-nerd-font-powerlevel10k
 wireless_tools
 zsh
 zsh-autosuggestions
+zsh-syntax-highlighting
+zsh-theme-powerlevel10k
