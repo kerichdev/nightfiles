@@ -30,7 +30,7 @@ Before going further, you can try running `confirm_install.sh` to make sure if e
 
 *The deplist may be incomplete! If you notice something not working, feel free to add any packages into the list, and I will see if I did, in fact, miss them.*
 
-Then, move the contents of the repo `.config` folder, to your `.config` folder in `$HOME` (`/home/YOUR_USERNAME/.config/`)
+Then, move the contents of the repo `.config` folder, to your `.config` folder in `$HOME` (`/home/YOUR_USERNAME/.config/`).
 
 ### Betterlockscreen
 
@@ -53,5 +53,15 @@ Because of how btop handles configs, before I make an installation script, to ap
 1. Open `btop`, click <kbd>Esc</kbd>, choose *Themes* and find *Catppuccin*. Choose it, and you're good to go.
 
 2. Open `btop.conf` in the btop config folder, and change the `$USER` in the `color_theme` line to your username.
+
+### zsh
+
+First of all, refer to the installation methods of oh-my-zsh. Only replace the `oh-my-zsh.sh` in `$HOME/.oh-my-zsh` after it is installed.
+
+Then, look for all aur-installed plugins in `/usr/share/zsh/plugins`.
+
+Simply copy the `zsh-autosuggestions` and `zsh-syntax-highlighting` to `$HOME/.oh-my-zsh/custom/plugins`.
+
+The `powerlevel10k` theme is located in `/usr/share` under `zsh-theme-powerlevel10k` - copy it to `$HOME/.oh-my-zsh/custom/themes`, and rename the folder to `powerlevel10k`.
 
 ## KEEP IN MIND, THE REPO IS EXTREMELY INCOMPLETE, I'M WORKING ON FINISHING IT UP. You'll probably have to set up a lot of stuff yourself
