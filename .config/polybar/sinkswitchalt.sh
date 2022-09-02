@@ -8,7 +8,6 @@ SINKNUMTOTAL=`pactl list short sinks | xargs | tr " " "\n" | sed -n '2~7p' | wc 
 # if sunknum is sinknumtotal, then set sink at number 1, else set sink from sinknum+1
 
 if (( $SINKNUM == $SINKNUMTOTAL )); then
-	pactl set-default-sink $(pactl list short sinks | xargs | tr " " "\n" | sed -n '2~7p' | sed '1q;d')
-else 
-	pactl set-default-sink $(pactl list short sinks | xargs | tr " " "\n" | sed -n '2~7p' | sed "$(($SINKNUM+1)) q;d")
+	SINKNUM=0
 fi
+pactl set-default-sink $(pactl list short sinks | xargs | tr " " "\n" | sed -n '2~7p' | sed "$(($SINKNUM+1)) q;d")
