@@ -13,3 +13,6 @@
 [submodule "ManualThemes/telegram"]
 	path = ManualThemes/telegram
 	url = https://github.com/catppuccin/telegram
+[submodule "ManualThemes/youtubemusic"]
+	path = ManualThemes/youtubemusic
+	url = https://github.com/kerichdev/youtubemusic
