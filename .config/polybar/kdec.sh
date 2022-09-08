@@ -12,7 +12,7 @@ BATTERY_ICONS_CHARGING=("󰢟" "󰢜" "󰂆" "󰂇" "󰂈" "󰢝" "󰂉" "󰢞" 
 C_INDEX=$((CHARGE * 11 / 100))
 
 if [ "$C_INDEX" -ge 11 ]; then
-        C_INDEX=11
+        C_INDEX=10
 fi
 
 C_ICON=%{F$COLOR}${BATTERY_ICONS[$C_INDEX]}%{F-}
