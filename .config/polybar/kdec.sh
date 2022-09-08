@@ -6,73 +6,24 @@ CHARGE=`gdbus call --session --dest org.kde.kdeconnect --object-path /modules/kd
 CHARGESTATUS=`gdbus call --session --dest org.kde.kdeconnect --object-path /modules/kdeconnect/devices/$DEVICEID/battery --method org.freedesktop.DBus.Properties.Get org.kde.kdeconnect.device.battery isCharging 2>/dev/null| tr -d '(<' | tr -d '>,)' `
 ERRORCHK=`gdbus call --session --dest org.kde.kdeconnect --object-path /modules/kdeconnect/devices/$DEVICEID/battery --method org.freedesktop.DBus.Properties.Get org.kde.kdeconnect.device.battery charge 2>&1 | sed 's/:.*//'`
 
+BATTERY_ICONS=("󰂎" "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹")
+BATTERY_ICONS_CHARGING=("󰢟" "󰢜" "󰂆" "󰂇" "󰂈" "󰢝" "󰂉" "󰢞" "󰂊" "󰂋" "󰂅")
 
-round() { awk -v n=$1 -v d=$2 'BEGIN{print int((n+d/2)/d) * d}'; }
+C_INDEX=$((CHARGE * 11 / 100))
+
+if [ "$C_INDEX" -ge 11 ]; then
+        C_INDEX=11
+fi
+
+C_ICON=%{F$COLOR}${BATTERY_ICONS[$C_INDEX]}%{F-}
+CH_ICON=%{F$COLOR}${BATTERY_ICONS_CHARGING[$C_INDEX]}%{F-}
+
 if [ "$ERRORCHK" == "Error" ]
 	then echo "%{F$COLOR}󰄢%{F-}"
 	else 
-	CHARGERND=`round $CHARGE 10`
-
-	case $CHARGERND in
-	  0)
-		CICON=%{F$COLOR}󰂎%{F-}
-		CHICON=%{F$COLOR}󰢟%{F-}
-		;;
-
-	  10)
-	    CICON=%{F$COLOR}󰁺%{F-}
-	    CHICON=%{F$COLOR}󰢜%{F-}
-	    ;;
-
-	  20)
-	    CICON=%{F$COLOR}󰁻%{F-}
-	    CHICON=%{F$COLOR}󰂆%{F-}
-	    ;;
-
-	  30)
-	    CICON=%{F$COLOR}󰁼%{F-}
-	    CHICON=%{F$COLOR}󰂇%{F-}
-	    ;;
-
-	  40)
-	    CICON=%{F$COLOR}󰁽%{F-}
-	    CHICON=%{F$COLOR}󰂈%{F-}
-	    ;;
-
-	  50)
-	    CICON=%{F$COLOR}󰁾%{F-}
-	    CHICON=%{F$COLOR}󰢝%{F-}
-	    ;;
-
-	  60)
-	    CICON=%{F$COLOR}󰁿%{F-}
-	    CHICON=%{F$COLOR}󰂉%{F-}
-	    ;;
-
-	  70)
-	    CICON=%{F$COLOR}󰂀%{F-}
-	    CHICON=%{F$COLOR}󰢞%{F-}
-	    ;;
-
-	  80)
-	    CICON=%{F$COLOR}󰂁%{F-}
-	    CHICON=%{F$COLOR}󰂊%{F-}
-	    ;;
-
-	  90)
-	    CICON=%{F$COLOR}󰂂%{F-}
-	    CHICON=%{F$COLOR}󰂋%{F-}
-	    ;;
-
-	  100)
-	    CICON=%{F$COLOR}󰁹%{F-}
-	    CHICON=%{F$COLOR}󰂅%{F-}  
-	    ;;
-
-esac
 		if [ "$CHARGESTATUS" == "true" ]
-			then echo "%{F$COLOR}󰄡%{F-} $DEVICENAME ($CHICON$CHARGE%)"
-		else echo "%{F$COLOR}󰄡%{F-} $DEVICENAME ($CICON$CHARGE%)"
+			then echo "%{F$COLOR}󰄡%{F-} $DEVICENAME ($CH_ICON$CHARGE%)"
+		else echo "%{F$COLOR}󰄡%{F-} $DEVICENAME ($C_ICON$CHARGE%)"
 	fi
 fi
 
