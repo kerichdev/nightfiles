@@ -9,6 +9,10 @@ BATTERY_ICONS=("󰂎" "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "�
 C_INDEX=$((CHARGE * 11 / 100))
 C_ICON=%{F$COLOR}${BATTERY_ICONS[$C_INDEX]}%{F-}
 
+if [ "$C_INDEX" -ge 11 ]; then
+        C_INDEX=10
+fi
+
 if [ "$DEVICE" == "" ]
 	then echo "%{F$COLOR}󰂲%{F-}"
 	else 
