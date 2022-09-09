@@ -64,4 +64,14 @@ Simply copy the `zsh-autosuggestions` and `zsh-syntax-highlighting` to `$HOME/.o
 
 The `powerlevel10k` theme is located in `/usr/share` under `zsh-theme-powerlevel10k` - copy it to `$HOME/.oh-my-zsh/custom/themes`, and rename the folder to `powerlevel10k`.
 
+### bluetooth: experimentals
+
+For proper battery percentage display with the `bt.sh` module from polybar, you will have to add the `--experimental` flag to `bluetooth.service`.:
+
+1. `sudo systemctl edit --full bluetooth.service`
+
+2. To the end of the `ExecStart` line, append `--experimental` flag
+
+3. Save, and restart the service: `systemctl restart bluetooth.service`
+
 ## KEEP IN MIND, THE REPO IS EXTREMELY INCOMPLETE, I'M WORKING ON FINISHING IT UP. You'll probably have to set up a lot of stuff yourself
