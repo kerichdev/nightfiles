@@ -1,26 +1,43 @@
 #!/usr/bin/env bash
 source ~/.config/polybar/colors.sh
+COUNT_CONNECTED=`seq $(bluetoothctl devices Connected | wc -l)` #5.65 and up
 DEVICE=`bluetoothctl info | awk -F 'Alias: ' '{print $2}' | tr -d " \t\n"`
-ICON=`bluetoothctl info | awk -F 'Icon: ' '{print $2}' | tr -d " \t\n"`
-CHARGE=`upower -d | awk -F 'percentage: ' '{print $2}' | tr -d " \t\n" | cut -f1 -d"%"`
 
-BATTERY_ICONS=("󰂎" "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹")
+OUTPUTARRAY=()
+FINAL=()
+LOOPWATCHDOG=0
 
-C_INDEX=$((CHARGE * 11 / 100))
-C_ICON=%{F$COLOR}${BATTERY_ICONS[$C_INDEX]}%{F-}
+for COUNT in $COUNT_CONNECTED; do
+	OUTPUTARRAY+=($(bluetoothctl devices Connected | cut -f2 -d' ' | while read uuid; do bluetoothctl info $uuid; done | grep "Icon\|Battery Percentage\|Connected" | sed -n -e 's/^.*Icon: //p' | sed -n ${COUNT}p) $(bluetoothctl devices Connected | cut -f2 -d' ' | while read uuid; do bluetoothctl info $uuid; done | grep "Icon\|Battery Percentage\|Connected" | sed -n -e 's/^.*Battery Percentage: //p' | sed -n ${COUNT}p | sed 's/(\(.*\))/\1/' | sed 's/[^ ]* //'))
+done
 
-if [ "$C_INDEX" -ge 11 ]; then
-        C_INDEX=10
-fi
+for ELEMENT in ${OUTPUTARRAY[@]}; do
+	case $ELEMENT in
+		"input-keyboard") FINAL+=("%{F$COLOR}󰌌%{F-}" ${OUTPUTARRAY[LOOPWATCHDOG+1]}%)
+		((LOOPWATCHDOG=LOOPWATCHDOG+2))
+		FINAL+=("• ")
+		;;
+		"audio-headphones") FINAL+=("%{F$COLOR}󰋋%{F-}" ${OUTPUTARRAY[LOOPWATCHDOG+1]}%)
+		((LOOPWATCHDOG=LOOPWATCHDOG+2))
+		FINAL+=("• ")
+		;;
+		"audio-card") FINAL+=("%{F$COLOR}󰓃%{F-}" ${OUTPUTARRAY[LOOPWATCHDOG+1]}%)
+		((LOOPWATCHDOG=LOOPWATCHDOG+2))
+		FINAL+=("• ")
+		;;
+		"audio-headset") FINAL+=("%{F$COLOR}󱡏%{F-}" ${OUTPUTARRAY[LOOPWATCHDOG+1]}%)
+		((LOOPWATCHDOG=LOOPWATCHDOG+2))
+		FINAL+=("• ")
+		;;
+	esac
+done
+
+unset FINAL[-1]
 
 if [ "$DEVICE" == "" ]
 	then echo "%{F$COLOR}󰂲%{F-}"
 	else 
-		if [ "$ICON" == "audio-headphones" ]
-			then echo "%{F$COLOR}󰂰%{F-} $DEVICE ($C_ICON$CHARGE%)"
-		else if [ "$ICON" == "input-keyboard" ]
-			then echo "%{F$COLOR}󰂱%{F-} $DEVICE ($C_ICON$CHARGE%)"
-		else echo "%{F$COLOR}󰂯%{F-} $DEVICE"
-		fi
-	fi
+		echo ${FINAL[@]} | awk '{$1=$1};1' #sed 's/󰓃 %/󰓃/g' #TO FIX
 fi
+
+#%{F$COLOR} %{F-}
