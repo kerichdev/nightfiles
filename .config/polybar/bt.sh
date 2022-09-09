@@ -37,7 +37,7 @@ unset FINAL[-1]
 if [ "$DEVICE" == "" ]
 	then echo "%{F$COLOR}󰂲%{F-}"
 	else 
-		echo ${FINAL[@]} | awk '{$1=$1};1' #sed 's/󰓃 %/󰓃/g' #TO FIX
+		echo ${FINAL[@]} | awk '{$1=$1};1' | sed 's/󰓃%{F-} %/󰓃%{F-}/g'
 fi
 
 #%{F$COLOR} %{F-}
