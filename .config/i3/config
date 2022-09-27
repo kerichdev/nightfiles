@@ -149,9 +149,3 @@ exec_always --no-startup-id "picom --experimental-backends"
 exec_always --no-startup-id /usr/lib/kdeconnectd
 exec_always --no-startup-id discord-canary --start-minimized
 #exec_always --no-startup-id linux-discord-rich-presence -c ~/.config/linux-discord-rich-presencerc
-
-
-# === PLACEHOLDERS ===
-
-#exec_always --no-startup-id "~/.config/polybar/hack/scripts/pywal.sh /home/kerichuu/Wallpapers/refcube.jpg &"
-#exec_always --no-startup-id "~/.config/polybar/hack/launch.sh &"
