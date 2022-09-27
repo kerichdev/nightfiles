@@ -104,7 +104,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # bindsym $mod+Shift+e exec "rofi -modi p:rofi-power-menu -show p"
-bindsym $mod+Shift+e exec sh /home/kerichuu/.config/rofi/applets/android/powermenu.sh
+bindsym $mod+Shift+e exec sh ~/.config/rofi/applets/android/powermenu.sh
 
 mode "resize" {
 
