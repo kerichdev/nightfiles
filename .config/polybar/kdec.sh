@@ -1,8 +1,9 @@
 #!/bin/bash
+
 source ~/.config/polybar/colors.sh
 DEVICECOUNT=`kdeconnect-cli -a --id-only 2>&1 | wc -l`
-DEVICEID=`kdeconnect-cli -l --id-only 2>&1 | sed '2,$d'`
-DEVICENAME=`kdeconnect-cli -l --name-only 2>&1 | sed '2,$d'`
+DEVICEID=`kdeconnect-cli -a --id-only 2>&1 | sed '2,$d'`
+DEVICENAME=`kdeconnect-cli -a --name-only 2>&1 | sed '2,$d'`
 CHARGE=`gdbus call --session --dest org.kde.kdeconnect --object-path /modules/kdeconnect/devices/$DEVICEID/battery --method org.freedesktop.DBus.Properties.Get org.kde.kdeconnect.device.battery charge 2>/dev/null| tr -d '(<' | tr -d '>,)' `
 CHARGESTATUS=`gdbus call --session --dest org.kde.kdeconnect --object-path /modules/kdeconnect/devices/$DEVICEID/battery --method org.freedesktop.DBus.Properties.Get org.kde.kdeconnect.device.battery isCharging 2>/dev/null| tr -d '(<' | tr -d '>,)' `
 ERRORCHK=`gdbus call --session --dest org.kde.kdeconnect --object-path /modules/kdeconnect/devices/$DEVICEID/battery --method org.freedesktop.DBus.Properties.Get org.kde.kdeconnect.device.battery charge 2>&1 | sed 's/:.*//'`
