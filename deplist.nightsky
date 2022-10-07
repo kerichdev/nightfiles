@@ -1,4 +1,3 @@
-alacritty
 betterlockscreen
 bluez
 bluez-libs
@@ -31,6 +30,7 @@ rofi
 ttf-material-design-icons-git
 ttf-meslo-nerd-font-powerlevel10k
 wireless_tools
+xfce4-terminal
 zsh
 zsh-autosuggestions
 zsh-syntax-highlighting
