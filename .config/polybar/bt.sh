@@ -21,7 +21,7 @@ else
 
 	for ELEMENT in ${OUTPUTARRAY[@]}; do
         if ! [[ $ELEMENT =~ $REXP ]] ; then
-            FINAL+=("${ICONS[$ELEMENT]}" ${OUTPUTARRAY[LOOPWATCHDOG+1]}% "• ")
+            FINAL+=("${ICONS[$ELEMENT]}" ${OUTPUTARRAY[LOOPWATCHDOG+1]}% "%{O10} ")
             ((LOOPWATCHDOG=LOOPWATCHDOG+2))
         fi
 	done
