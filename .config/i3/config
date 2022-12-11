@@ -127,12 +127,22 @@ exec --no-startup-id flameshot
 
 bindsym Print exec flameshot gui
 
-for_window [class="^.*"] border pixel 0
+for_window [all] border pixel 0
 smart_borders on
 smart_borders no_gaps
 border_radius 4
 gaps inner 12
 gaps outer -6
+
+# colors
+# class                 border  backgr. text    indicator child_border
+client.focused          #89b4fa #1e1e2e #cdd6f4 #89b4fa   #89b4fa
+client.focused_inactive #1e1e2e #313244 #cdd6f4 #313244   #45475a
+client.unfocused        #1e1e2e #313244 #a6adc8 #313244   #313244
+client.urgent           #1e1e2e #f38ba8 #cdd6f4 #f38ba8   #f38ba8
+client.placeholder      #11111b #181825 #cdd6f4 #11111b   #181825
+
+client.background       #1e1e2e
 
 exec_always feh --bg-scale ~/Wallpapers/tropic_island_night.jpg
 bindsym Control+$mod+l exec "betterlockscreen --lock"
@@ -142,7 +152,6 @@ bindsym $mod+Tab exec rofi -show window
 bindsym $mod+Shift+s exec flameshot gui
 exec_always --no-startup-id "~/.config/polybar/runpb.sh"
 exec_always --no-startup-id "/usr/bin/dunst"
-exec_always --no-startup-id "picom --experimental-backends"
+exec_always --no-startup-id "picom"
 exec_always --no-startup-id /usr/lib/kdeconnectd
-exec_always --no-startup-id discord-canary --start-minimized
-#exec_always --no-startup-id linux-discord-rich-presence -c ~/.config/linux-discord-rich-presencerc
+exec_always --no-startup-id discord-canary --start-minimized --no-sandbox --ignore-gpu-blocklist --disable-features=UseOzonePlatform --enable-features=VaapiVideoDecoder --use-gl=desktop --enable-gpu-rasterization --enable-zero-copy
