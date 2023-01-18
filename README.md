@@ -46,14 +46,6 @@ Then, enable the systemd service for automatic lock-on-suspend:
 systemctl enable betterlockscreen@$USER
 ```
 
-### btop
-
-Because of how btop handles configs, before I make an installation script, to apply the catppuccin theme you have to do one of the following:
-
-1. Open `btop`, click <kbd>Esc</kbd>, choose *Themes* and find *Catppuccin*. Choose it, and you're good to go.
-
-2. Open `btop.conf` in the btop config folder, and change the `$USER` in the `color_theme` line to your username.
-
 ### zsh
 
 First of all, refer to the installation methods of oh-my-zsh. Only replace the `oh-my-zsh.sh` in `$HOME/.oh-my-zsh` after it is installed.
