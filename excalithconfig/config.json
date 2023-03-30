@@ -1,262 +1,216 @@
 {
-	username: "kerichuu",
-	theme: {
-		backgroundColor: "#121317",
-		windowColor: "#1e212b",
-		glowColor: "#89b4fa57",
-		white: "#cdd6f4",
-		gray: "#9399b2",
-		black: "#1e1e2e",
-		red: "#f38ba8",
-		green: "#a6e3a1",
-		yellow: "#f9e2af",
-		blue: "#89b4fa",
-		cyan: "#94e2d5",
-		magenta: "#cba6f7",
-		violet: "#f5c2e7",
-		orange: "#fab387"
+	"username": "kerichuu",
+	"theme": {
+		"backgroundColor": "#181825",
+		"windowColor": "#1e1e2e",
+		"glowColor": "#89b4fa77",
+		"white": "#cdd6f4",
+		"gray": "#9399b2",
+		"black": "#11111b",
+		"red": "#f38ba8",
+		"green": "#a6e3a1",
+		"blue": "#89b4fa",
+		"yellow": "#f9e2af",
+		"cyan": "#94e2d5",
+		"magenta": "#cba6f7",
+		"violet": "#f5c2e7",
+		"orange": "#fab387"
 	},
-	terminal: {
-		fixedHeight: true,
-		windowGlow: true,
-		textGlow: false
+	"terminal": {
+		"fixedHeight": true,
+		"windowGlow": false,
+		"textGlow": false
 	},
-	prompt: {
-		ctrlC: true,
-		placeholder: "command...",
-		placeholderColor: "gray",
-		userColor: "green",
-		atColor: "gray",
-		hostColor: "magenta",
-		promptColor: "magenta",
-		promptSymbol: "❯",
-		caretColor: "green",
-		selectionBg: "yellow",
-		selectionFg: "black"
+	"prompt": {
+		"ctrlC": true,
+		"placeholder": "",
+		"placeholderColor": "gray",
+		"userColor": "green",
+		"atColor": "gray",
+		"hostColor": "magenta",
+		"promptColor": "magenta",
+		"promptSymbol": "❯",
+		"caretColor": "green",
+		"selectionBg": "yellow",
+		"selectionFg": "black"
 	},
-	fetch: {
-		timeFormat: "HH:mm",
-		dateFormat: "DD/MM/YYYY",
-		titleColor: "yellow",
-		image: "icon.svg",
-		data: [
-			"Time: {time}",
-			"Date: {date}",
-			"{seperator}",
-			"OS: {osName} {osVersion}",
-			"Browser: {browser} {browserVersion}",
-			"Engine: {engineName}",
-			"{seperator}",
-			"{colors}"
-		]
+	"fetch": {
+		"timeFormat": "hh:mm A",
+		"dateFormat": "ddd, MMM DD",
+		"titleColor": "yellow"
 	},
-	urlLaunch: {
-		target: "_self",
-		defaultColor: "white",
-		hoverColor: "violet"
+	"urlLaunch": {
+		"target": "_self",
+		"defaultColor": "white",
+		"hoverColor": "violet"
 	},
-	search: {
-		default: "https://google.com/search?q=",
-		target: "_self",
-		shortcutRegex: "([A-Za-z0-9]+) (.*)",
-		shortcuts: [
+	"search": {
+		"default": "https://google.com/search?q=",
+		"target": "_self",
+		"shortcutRegex": "([A-Za-z0-9]+) (.*)",
+		"shortcuts": [
 			{
-				alias: "g",
-				name: "Google Search",
-				url: "https://google.com/search?q={}"
+				"alias": "g",
+				"name": "Google Search",
+				"url": "https://google.com/search?q={}"
 			},
-			{
-				alias: "d",
-				name: "DuckDuckGo Search",
-				url: "https://duckduckgo.com/?q={}"
-			},
-			{
-				alias: "b",
-				name: "Brave Search",
-				url: "https://search.brave.com/search?q={}"
-			},
-			{
-				alias: "gh",
-				name: "Github Search",
-				url: "https://github.com/search?q={}"
-			},
-			{
-				alias: "s",
-				name: "Stack Overflow Search",
-				url: "https://stackoverflow.com/search?q={}"
-			},
-			{
-				alias: "r",
-				name: "Subreddit Search",
-				url: "https://reddit.com/r/{}"
-			},
-			{
-				alias: "w",
-				name: "Wikipedia Search",
-				url: "https://en.wikipedia.org/wiki/{}"
+            {
+				"alias": "s",
+				"name": "Stack Overflow Search",
+				"url": "https://stackoverflow.com/search?q={}"
 			}
 		]
 	},
-	sections: [
+	"sections": [
 		{
-			title: "General",
-			color: "green",
-			align: "left",
-			links: [
+			"title": "General",
+			"color": "green",
+			"align": "left",
+			"links": [
 				{
-					name: "Portfolio",
-					url: "https://cancellek.com",
-					icon: "mdi:web"
+					"name": "Carrd",
+					"url": "https://kerichuu.carrd.co/",
+					"icon": "mdi:account"
 				},
 				{
-					name: "Keybase",
-					url: "https://keybase.io/",
-					icon: "fa-brands:keybase"
+					"name": "Arch Wiki",
+					"url": "https://wiki.archlinux.org/",
+					"icon": "mdi:arch"
 				},
 				{
-					name: "GPT",
-					url: "https://chat.openai.com/",
-					icon: "simple-icons:openai"
+					"name": "News",
+					"url": "https://news.google.com/",
+					"icon": "mdi:newspaper"
 				},
 				{
-					name: "OCI",
-					url: "https://www.oracle.com/cloud/",
-					icon: "simple-icons:oracle"
+					"name": "Notes",
+					"url": "https://keep.google.com/",
+					"icon": "mdi:lightbulb-outline"
 				}
 			]
 		},
 		{
-			title: "Dev",
-			color: "magenta",
-			align: "left",
-			links: [
+			"title": "Development",
+			"color": "magenta",
+			"align": "left",
+			"links": [
 				{
-					name: "GitHub",
-					url: "https://github.com",
-					icon: "mdi:github"
+					"name": "GitHub",
+					"url": "https://github.com",
+					"icon": "mdi:github"
 				},
 				{
-					name: "GitLab",
-					url: "https://gitlab.com",
-					icon: "ph:gitlab-logo-simple-fill"
-				},
-				{
-					name: "Dev.to",
-					url: "https://dev.to",
-					icon: "material-symbols:logo-dev"
-				},
-				{
-					name: "Stack Overflow",
-					url: "https://stackoverflow.com/",
-					icon: "mdi:stack-overflow"
+					"name": "Stack Overflow",
+					"url": "https://stackoverflow.com/",
+					"icon": "mdi:stack-overflow"
 				}
 			]
 		},
 		{
-			title: "Social",
-			color: "violet",
-			align: "left",
-			links: [
+			"title": "Social",
+			"color": "violet",
+			"align": "left",
+			"links": [
 				{
-					name: "Twitter",
-					url: "https://twitter.com",
-					icon: "mdi:twitter"
+					"name": "Telegram",
+					"url": "https://web.telegram.org/",
+					"icon": "mdi:telegram"
 				},
 				{
-					name: "Mastodon",
-					url: "https://mastodon.social/",
-					icon: "ri:mastodon-fill"
+					"name": "Discord",
+					"url": "https://discord.com/app/",
+					"icon": "mdi:discord"
 				},
 				{
-					name: "Reddit",
-					url: "https://reddit.com",
-					icon: "mdi:reddit"
+					"name": "VK",
+					"url": "https://vk.com/",
+					"icon": "mdi:vk"
 				},
 				{
-					name: "Polywork",
-					url: "https://polywork.com",
-					icon: "simple-icons:polywork"
+					"name": "Reddit",
+					"url": "https://reddit.com/",
+					"icon": "mdi:reddit"
 				}
 			]
 		},
 		{
-			title: "Gaming",
-			color: "cyan",
-			align: "left",
-			links: [
+			"title": "Gaming",
+			"color": "cyan",
+			"align": "left",
+			"links": [
 				{
-					name: "Polygon",
-					url: "https://polygon.com",
-					icon: "uil:polygon"
+					"name": "Steam",
+					"url": "https://store.steampowered.com/",
+					"icon": "mdi:steam"
 				},
 				{
-					name: "IGN",
-					url: "https://ign.com",
-					icon: "mdi:currency-sign"
+					"name": "Funpay",
+					"url": "https://funpay.com/",
+					"icon": "mdi:alpha-f-box"
 				},
 				{
-					name: "RPS",
-					url: "https://rockpapershotgun.com/",
-					icon: "ph:toilet-paper-bold"
+					"name": "Jackbox",
+					"url": "https://jackbox.tv/",
+					"icon": "mdi:package-variant"
 				},
 				{
-					name: "80lv",
-					url: "https://80.lv/",
-					icon: "tabler:hand-rock"
+					"name": "Bottles",
+					"url": "https://usebottles.com/",
+					"icon": "mdi:bottle-soda"
 				}
 			]
 		},
 		{
-			title: "Science",
-			color: "blue",
-			align: "left",
-			links: [
+			"title": "Tools",
+			"color": "blue",
+			"align": "left",
+			"links": [
 				{
-					name: "PopSci",
-					url: "https://popsci.com/",
-					icon: "material-symbols:science"
+					"name": "Google Fonts",
+					"url": "https://fonts.google.com/",
+					"icon": "mdi:function"
 				},
 				{
-					name: "Space",
-					url: "fa6-solid:user-astronaut",
-					icon: "mdi:reddit"
+					"name": "MD Icons",
+					"url": "https://pictogrammers.com/library/mdi",
+					"icon": "mdi:material-design"
 				},
 				{
-					name: "NASA",
-					url: "https://blogs.nasa.gov/",
-					icon: "simple-icons:nasa"
+					"name": "Color Picker",
+					"url": "https://imagecolorpicker.com/en/",
+					"icon": "mdi:palette"
 				},
 				{
-					name: "ESA",
-					url: "https://blogs.esa.int/",
-					icon: "mdi:black-mesa"
+					"name": "W3S",
+					"url": "https://www.w3schools.com/",
+					"icon": "mdi:alpha-w"
 				}
 			]
 		},
 		{
-			title: "Tech",
-			color: "yellow",
-			align: "left",
-			links: [
+			"title": "Entertainment",
+			"color": "yellow",
+			"align": "left",
+			"links": [
 				{
-					name: "TechCrunch",
-					url: "https://techcrunch.com/",
-					icon: "game-icons:techno-heart"
+					"name": "YouTube",
+					"url": "https://techcrunch.com/",
+					"icon": "mdi:youtube"
 				},
 				{
-					name: "Verge",
-					url: "https://www.theverge.com/",
-					icon: "arcticons:verge"
+					"name": "YouTube Music",
+					"url": "https://www.theverge.com/",
+					"icon": "mdi:play-circle-outline"
 				},
 				{
-					name: "It's Foss",
-					url: "https://itsfoss.com/",
-					icon: "ri:mastodon-fill"
+					"name": "Pinterest",
+					"url": "https://pinterest.com/",
+					"icon": "mdi:pinterest"
 				},
 				{
-					name: "9To5 Linux",
-					url: "https://9to5linux.com/",
-					icon: "uil:linux"
+					"name": "Kinopoisk",
+					"url": "https://kinopoisk.ru/",
+					"icon": "mdi:alpha-k-box"
 				}
 			]
 		}
