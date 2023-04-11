@@ -194,12 +194,12 @@
 			"links": [
 				{
 					"name": "YouTube",
-					"url": "https://techcrunch.com/",
+					"url": "https://youtube.com/",
 					"icon": "mdi:youtube"
 				},
 				{
-					"name": "YouTube Music",
-					"url": "https://www.theverge.com/",
+					"name": "YTM",
+					"url": "https://music.youtube.com/",
 					"icon": "mdi:play-circle-outline"
 				},
 				{
